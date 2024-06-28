@@ -1,0 +1,5 @@
+28.06.24 -- changed Sprites	
+ 	 -- need to adjust height and wide px of sprites/ change of some Sprites (draws left etc.)
+	 -- adding of sounds 
+	 -- Visual Modality is done second Modality has to be added (fusion and fision)
+	 -- maybe some scripts have to be adjusted (drawing is a little clunky) 
