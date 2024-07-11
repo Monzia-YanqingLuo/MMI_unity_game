@@ -10,7 +10,7 @@ namespace Match3
 
         private float _timer;
 
-        private void Start ()
+        private void Start()
         {
             type = LevelType.Timer;
 
@@ -24,7 +24,7 @@ namespace Match3
         {
             _timer += Time.deltaTime;
             hud.SetRemaining(
-                $"{(int) Mathf.Max((timeInSeconds - _timer) / 60, 0)}:{(int) Mathf.Max((timeInSeconds - _timer) % 60, 0):00}");
+                $"{(int)Mathf.Max((timeInSeconds - _timer) / 60, 0)}:{(int)Mathf.Max((timeInSeconds - _timer) % 60, 0):00}");
 
             if (timeInSeconds - _timer <= 0)
             {
@@ -38,6 +38,6 @@ namespace Match3
                 }
             }
         }
-	
+
     }
 }
