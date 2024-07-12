@@ -30,7 +30,7 @@ namespace Match3
         }
         IEnumerator TypeLine()
         {
-
+            yield return null;
         }
     }
 }
