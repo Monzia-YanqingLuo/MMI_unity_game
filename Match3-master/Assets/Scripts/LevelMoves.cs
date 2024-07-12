@@ -12,16 +12,16 @@ namespace Match3
         private int _movesUsed = 0;
         public AudioClip movementSound; // Keep the AudioClip reference to specify the movement sound
 
-
         private void Start()
         {
+            
             type = LevelType.Moves;
-
             hud.SetLevelType(type);
             hud.SetScore(currentScore);
             hud.SetTarget(targetScore);
             hud.SetRemaining(numMoves);
         }
+
 
         public override void OnMove()
         {
@@ -48,5 +48,5 @@ namespace Match3
         }
     }
 
-
 }
+
