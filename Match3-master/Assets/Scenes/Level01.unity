@@ -249,22 +249,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-<<<<<<< HEAD
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 224754216104965626, guid: e48363766c8c65a40931017ebcedffa0,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 895287094}
+      - targetCorrespondingSourceObject: {fileID: 224754216104965626, guid: e48363766c8c65a40931017ebcedffa0, type: 3}
+        insertIndex: -1
+        addedObject: {fileID: 895287094}
+      - targetCorrespondingSourceObject: {fileID: 1669610056468242, guid: e48363766c8c65a40931017ebcedffa0, type: 3}
+        insertIndex: -1
+        addedObject: {fileID: 1238826022}
     m_AddedComponents: []
-=======
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1669610056468242, guid: e48363766c8c65a40931017ebcedffa0,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1238826022}
->>>>>>> 21b3ea6ad7733e89de6d507666326083e5ce9833
-  m_SourcePrefab: {fileID: 100100000, guid: e48363766c8c65a40931017ebcedffa0, type: 3}
+    m_SourcePrefab: {fileID: 100100000, guid: e48363766c8c65a40931017ebcedffa0, type: 3}
+
 --- !u!114 &97316481 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114701695403606658, guid: e48363766c8c65a40931017ebcedffa0,
