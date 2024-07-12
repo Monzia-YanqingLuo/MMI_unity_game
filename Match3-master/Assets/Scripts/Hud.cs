@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 namespace Match3
 {
@@ -15,14 +16,31 @@ namespace Match3
         public Text targetSubtext;
         public Text scoreText;
         public Image[] stars;
+        public AudioSource audioSource;  // This will be your centralized audio controller within the HUD
+        public AudioMixer mixer; // Reference to the Audio Mixer
+        public Slider volumeSlider; // Reference to the music volume slider
+
+        private const string MIXER_MUSIC = "MusicVolume";
+
+
+
 
         private int _starIndex = 0;
 
-        private void Start ()
+        private void Start()
         {
             for (int i = 0; i < stars.Length; i++)
             {
                 stars[i].enabled = i == _starIndex;
+            }
+            if (volumeSlider != null)
+            {
+                volumeSlider.value = PlayerPrefs.GetFloat("MusicVolume", 0.5f); // 假设0.5是默认值
+                volumeSlider.onValueChanged.AddListener(SetMusicVolume);
+            }
+            else
+            {
+                Debug.LogError("Volume Slider is not assigned in the Inspector");
             }
         }
 
@@ -36,7 +54,7 @@ namespace Match3
             {
                 visibleStar = 1;
             }
-            else if  (score >= level.score2Star && score < level.score3Star)
+            else if (score >= level.score2Star && score < level.score3Star)
             {
                 visibleStar = 2;
             }
@@ -88,5 +106,18 @@ namespace Match3
         }
 
         public void OnGameLose() => gameOver.ShowLose();
+
+        public void SetMusicVolume(float volume)
+        {
+            if (mixer != null)
+            {
+                mixer.SetFloat(MIXER_MUSIC, Mathf.Log10(volume) * 20);
+            }
+            else
+            {
+                Debug.LogError("Audio Mixer is not assigned on " + gameObject.name);
+            }
+
+        }
     }
 }

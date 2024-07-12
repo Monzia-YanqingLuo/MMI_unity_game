@@ -1,12 +1,17 @@
-﻿namespace Match3
+﻿
+using UnityEngine.Audio;
+using UnityEngine;
+
+namespace Match3
 {
     public class LevelMoves : Level
     {
-
         public int numMoves;
         public int targetScore;
 
         private int _movesUsed = 0;
+        public AudioClip movementSound; // Keep the AudioClip reference to specify the movement sound
+
 
         private void Start()
         {
@@ -21,19 +26,27 @@
         public override void OnMove()
         {
             _movesUsed++;
-
             hud.SetRemaining(numMoves - _movesUsed);
 
-            if (numMoves - _movesUsed != 0) return;
-        
-            if (currentScore >= targetScore)
+            // Play the move sound effect using the HUD's AudioSource
+            if (hud.audioSource != null && movementSound != null)
             {
-                GameWin();
+                hud.audioSource.PlayOneShot(movementSound);
             }
-            else
+
+            if (numMoves - _movesUsed == 0)
             {
-                GameLose();
+                if (currentScore >= targetScore)
+                {
+                    GameWin();
+                }
+                else
+                {
+                    GameLose();
+                }
             }
         }
     }
+
+
 }
