@@ -531,10 +531,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!1 &637607538
 GameObject:
-=======
 --- !u!1 &1238826020 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1669610056468242, guid: e48363766c8c65a40931017ebcedffa0,
@@ -543,12 +541,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!82 &1238826022
 AudioSource:
->>>>>>> 21b3ea6ad7733e89de6d507666326083e5ce9833
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   serializedVersion: 6
   m_Component:
   - component: {fileID: 637607539}
@@ -1019,7 +1015,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
-=======
   m_GameObject: {fileID: 1238826020}
   m_Enabled: 1
   serializedVersion: 4
@@ -1111,7 +1106,6 @@ RectTransform:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
->>>>>>> 21b3ea6ad7733e89de6d507666326083e5ce9833
 --- !u!1 &1773144087
 GameObject:
   m_ObjectHideFlags: 0
