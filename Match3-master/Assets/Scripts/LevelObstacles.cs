@@ -1,4 +1,7 @@
-﻿namespace Match3
+﻿using UnityEngine.Audio;
+using UnityEngine;
+
+namespace Match3
 {
     public class LevelObstacles : Level
     {
@@ -10,6 +13,7 @@
     
         private int _movesUsed = 0;
         private int _numObstaclesLeft;
+        public AudioClip movementSound; // Keep the AudioClip reference to specify the movement sound
 
         private void Start ()
         {
@@ -29,8 +33,13 @@
         public override void OnMove()
         {
             _movesUsed++;
-
             hud.SetRemaining(numMoves - _movesUsed);
+
+            // Play the move sound effect using the HUD's AudioSource
+            if (hud.audioSource != null && movementSound != null)
+            {
+                hud.audioSource.PlayOneShot(movementSound);
+            }
 
             if (numMoves - _movesUsed == 0 && _numObstaclesLeft > 0)
             {
