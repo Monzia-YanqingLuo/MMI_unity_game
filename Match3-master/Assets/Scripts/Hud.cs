@@ -72,7 +72,7 @@ namespace Match3
                     break;
                 case LevelType.Obstacle:
                     remainingSubText.text = "moves remaining";
-                    targetSubtext.text = "bubbles remaining";
+                    targetSubtext.text = "VAR remaining";
                     break;
                 case LevelType.Timer:
                     remainingSubText.text = "time remaining";
